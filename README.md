@@ -4,6 +4,9 @@ School Data Site made in Django 5.2
 ## Befor First Run
 `
 python ./manage.py makemigrations
+`
+
+`
 python ./manage.py migrate
 `
 
