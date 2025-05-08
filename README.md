@@ -16,7 +16,7 @@ python ./manage.py runserver
 `
 ## Runing development Server at fixed ip/port
 `
-python ./manage.py runserver <ip>:<pory>
+python ./manage.py runserver <ip>:<port>
 `
 
 ## Running test
