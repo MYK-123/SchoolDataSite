@@ -1,0 +1,71 @@
+{% load static %}
+
+<div class="contentDiv">
+    <div style="display: flex;  flex-direction: column;">
+        <h3>Add Guardian Details?
+        <select name="addGuardian" id="addGuardian" class="txtBx1" style="width: auto;" onchange="guardianSelected(this)">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        </h3>
+    </div>
+    <div id="guardianDiv">
+        <h3>Guardian's Details:</h3> 
+        <table style="width: 80%;" border="0">
+            <tr>
+                <td style="width: 15%;">Guardian's Name: </td>
+                <td colspan="5"><input type="text" name="guardian_name" class="txtBx1" value="{{ form.guardian_name.value }}"></td>
+                
+                <td rowspan="8">
+                    <div style="display: flex; justify-content: center;">
+                        <img src="{% static 'student.jpg' %}" alt="guardian's Photo Placeholder" onerror="this.src='{% static 'PhotoNA.jpg' %}'" style="max-height: 120px;">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>ID Proof:</td>
+                <td colspan="2">
+                    <select name="guardian_id" class="txtBx1" value="{{ form.guardian_id.value }}">
+                        <option value="Passport">Passport</option>
+                        <option value="VoterId">VoterId</option>
+                        <option value="DL">Driving License.</option>
+                        <option value="Ration Card">Ration Card</option>
+                    </select>
+                </td>
+                <td>ID Number:</td>
+                <td colspan="2"><input type="text" name="guardian_id_number" class="txtBx1" value="{{ form.guardian_id_number.value }}"></td>
+            </tr>
+
+            <tr>
+                <td>Occupation:</td>
+                <td colspan="2">
+                    <input type="text" name="guardian_occupation" class="txtBx1" value="{{ form.guardian_occupation.value }}">
+                </td>
+                <td>Qualification:</td>
+                <td colspan="2">
+                    <select name="guardian_qualification" class="txtBx1" value="{{ form.guardian_qualification.value }}">
+                        <option value="BelowHighschool">Below Highschool</option>
+                        <option value="Highschool">Highschool (10th)</option>
+                        <option value="Intermediate">Intermediate (12th)</option>
+                        <option value="Graduation">Graduation</option>
+                        <option value="PG">Post Graduation</option>
+                        <option value="Doctrate">Doctrate</option>
+                    </select>
+                </td>
+            </tr>
+            
+
+            <tr>
+                <td>Aadhar No:</td>
+                <td colspan="2">
+                    <input type="text" maxlength="12" name="guardian_aadhar" class="txtBx1" value="{{ form.guardian_aadhar.value }}" inputmode="numeric" pattern="[0-9]{12}"></td>
+                <td>Mobile No:</td>
+                <td colspan="2"><input type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" value="{{ form.guardian_mobile.value }}" name="guardian_mobile" class="txtBx1"></td>
+            </tr>
+        </table>
+        <br>
+    </div>
+</div>
+
+
+<br>

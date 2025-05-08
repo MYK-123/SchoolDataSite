@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+
+    {% load static %}
+
+    <script src="{% static 'scripts.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+
+  <form method="post">
+    {% csrf_token %}
+    <h3>Admission Info</h3>
+    
+    {{ admission_form.as_p }}
+
+    <h3>Student Info</h3>
+    {{ student_form.as_p }}
+
+    <h3>Father Info</h3>
+    {{ father_form.as_p }}
+
+    <h3>Mother Info</h3>
+    {{ mother_form.as_p }}
+
+    <h3>Guardian Info</h3>
+    {{ guardian_form.as_p }}
+
+    <h3>Address Info</h3>
+    {{ address_form.as_p }}
+
+    <h3>Previous School Info</h3>
+    {{ school_form.as_p }}
+
+    <button type="submit">Submit</button>
+</form>
+
+
+</body>
+</html>

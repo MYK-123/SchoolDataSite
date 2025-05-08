@@ -1,0 +1,105 @@
+{% load static %}
+
+<div class="contentDiv">
+    <div class="section">
+        <h3>Student's Details:</h3>
+        <div class="form-row">
+        <table style="width: 80%;" border="0">
+            <tr>
+                <td style="width: 15%;">Student Name: </td>
+                <td colspan="5"><input type="text" name="student_name" class="txtBx1" value="{{ form.student_name.value }}"></td>
+                
+                <td rowspan="8">
+                    <div style="display: flex; justify-content: center;">
+                        <img src="{% static 'student.jpg' %}" alt="Father's Photo Placeholder" onerror="this.src='{% static 'PhotoNA.jpg' %}';" style="max-height: 120px;">
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td>Class:</td>
+                <td>
+                    <select name="student_class" class="txtBx1"  value="{{ form.student_class.value }}">
+                        <option value="Nursery">Nursery</option>
+                        <option value="KG">K.G.</option>
+                        <option value="Prep">Prep</option>
+                        <option value="I">Ist</option>
+                        <option value="II">IInd</option>
+                        <option value="III">IIIrd</option>
+                        <option value="IV">IVth</option>
+                        <option value="V">Vth</option>
+                    </select>
+                </td>
+                <td>Aadhar No:</td>
+                <td colspan="3"><input type="text" maxlength="12" name="student_aadhar" class="txtBx1" value="{{ form.student_aadhar.value }}" inputmode="numeric" pattern="[0-9]{12}"></td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date" name="student_date_of_birth" class="txtBx1" value="{{ form.student_date_of_birth.value }}"></td>
+                <td>Religion:</td>
+                <td><input type="text" name="student_religion" class="txtBx1" value="{{ form.student_religion.value }}"></td>
+                <td>Nationality:</td>
+                <td><input type="text" name="student_nationality" class="txtBx1" value="{{ form.student_nationality.value }}"></td>
+            </tr>
+            <tr>
+                <td>Category:</td>
+                <td>
+                    <select name="student_category" class="txtBx1" value="{{ form.student_category.value }}" onchange="categorySelected(this)">
+                        <option value="GEN">General</option>
+                        <option value="OBC">OBC</option>
+                        <option value="SC">SC</option>
+                        <option value="ST">ST</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </td>
+                <td>Other(specify):</td>
+                <td><input type="text" name="student_category_other" value="{{ form.student_category_other.value }}" class="txtBx1" disabled></td>
+                <td>Gender:</td>
+                <td>
+                    <select name="student_gender" class="txtBx1" value="{{ form.student_gender.value }}">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Blood Group:</td>
+                <td>
+                    <select name="student_blood_group" class="txtBx1" value="{{ form.student_blood_group.value }}">
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </td>
+                <td>Height:</td>
+                <td><input type="text" name="student_height" class="txtBx1" value="{{ form.student_height.value }}"></td>
+                <td>Weight:</td>
+                <td><input type="text" name="student_weight" class="txtBx1" value="{{ form.student_weight.value }}"></td>
+            </tr>
+
+            <tr>
+                <td>Disability (if any):</td>
+                <td colspan="2"><input type="text" name="student_disability" class="txtBx1" value="{{ form.student_disability.value }}"></td>
+                <td>Any facility provided:</td>
+                <td colspan="2"><input type="text" name="student_facility" class="txtBx1" value="{{ form.student_facility.value }}"></td>
+            </tr>
+
+            <tr>
+                <td>Email id:</td>
+                <td colspan="2"><input type="email" name="student_email" class="txtBx1" value="{{ form.student_email.value }}"></td>
+                <td>Whatsapp No:</td>
+                <td colspan="2"><input type="tel" maxlength="10" name="student_whatsapp" class="txtBx1" value="{{ form.student_whatsapp.value }}" pattern="[0-9]{10}"></td>
+            </tr>
+            
+        </table>
+        </div>
+        <br>
+    </div>
+</div>
+<br>

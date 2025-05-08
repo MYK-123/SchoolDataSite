@@ -1,0 +1,91 @@
+/* External CSS for Admission Form */
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.pageFrm {
+    margin: auto;
+    background-color: white;
+    border-color: black;
+    border-width: 1.75mm;
+    border-style: double;
+    border-radius: 3mm;
+    max-width: 80%;
+}
+
+.frmHeader {
+    max-width: 100%;
+}
+
+.officebox {
+    background-color: white;
+    border-color: black;
+    border-width: 0.5mm;
+    border-style: solid;
+    max-width: 97%;
+    margin: auto;
+}
+
+.officebox table{
+    margin: auto;
+}
+
+.contentDiv {
+    margin: auto;
+    background-color: #f0f0f0;
+    border-color: black;
+    border-width: 0.5mm;
+    border-style: solid;
+    max-width: 97%;
+}
+
+.contentDiv div
+{
+    margin: auto;
+}
+
+.contentDiv div table{
+    margin: auto;
+}
+
+.txtBx {
+    width: 100%;
+    font-size: 17px;
+    background-color: #f0f0f0;
+    border-style: none;
+    border-bottom-style: solid;
+    border-bottom-width: 0.1mm;
+}
+
+.txtBx1 {
+    width: 100%;
+    font-size: 17px;
+    background-color: white;
+    border-style: solid;
+    border-width: 0.1mm;
+    border-bottom-style: solid;
+    border-bottom-width: 0.55mm;
+}
+
+#submitForm {
+    width: 120px;
+    height: 40px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0.5; /* initial state */
+}
+
+#submitForm:enabled {
+    opacity: 1;
+}
+
+#submitForm:hover:enabled {
+    background-color: #45a049;
+}

@@ -1,0 +1,62 @@
+{% load static %}
+
+<div class="contentDiv">
+    <div>
+        <h3>Mother's Details:</h3> 
+        <table style="width: 80%;" border="0">
+            <tr>
+                <td style="width: 15%;">Mother's Name: </td>
+                <td colspan="5"><input type="text" name="mother_name" class="txtBx1" value="{{ form.mother_name.value }}"></td>
+                
+                <td rowspan="8">
+                    <div style="display: flex; justify-content: center;">
+                        <img src="{% static 'student.jpg' %}" alt="mother's Photo Placeholder" onerror="this.src='{% static 'PhotoNA.jpg' %}'" style="max-height: 120px;">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>ID Proof:</td>
+                <td colspan="2">
+                    <select name="mother_id" class="txtBx1" value="{{ form.mother_id.value }}">
+                        <option value="Passport">Passport</option>
+                        <option value="VoterId">VoterId</option>
+                        <option value="DL">Driving License.</option>
+                        <option value="Ration Card">Ration Card</option>
+                    </select>
+                </td>
+                <td>ID Number:</td>
+                <td colspan="2"><input type="text" name="mother_id_number" class="txtBx1" value="{{ form.mother_id_number.value }}"></td>
+            </tr>
+
+            <tr>
+                <td>Occupation:</td>
+                <td colspan="2">
+                    <input type="text" name="mother_occupation" class="txtBx1" value="{{ form.mother_occupation.value }}">
+                </td>
+                <td>Qualification:</td>
+                <td colspan="2">
+                    <select name="mother_qualification" class="txtBx1" value="{{ form.mother_qualification.value }}">
+                        <option value="BelowHighschool">Below Highschool</option>
+                        <option value="Highschool">Highschool (10th)</option>
+                        <option value="Intermediate">Intermediate (12th)</option>
+                        <option value="Graduation">Graduation</option>
+                        <option value="PG">Post Graduation</option>
+                        <option value="Doctrate">Doctrate</option>
+                    </select>
+                </td>
+            </tr>
+            
+
+            <tr>
+                <td>Aadhar No:</td>
+                <td colspan="2">
+                    <input type="text" maxlength="12" name="mother_aadhar" class="txtBx1" value="{{ form.mother_aadhar.value }}" inputmode="numeric" pattern="[0-9]{12}"></td>
+                <td>Mobile No:</td>
+                <td colspan="2"><input type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" value="{{ form.mother_mobile.value }}" name="mother_mobile" class="txtBx1"></td>
+            </tr>
+        </table>
+        <br>
+    </div>
+</div>
+
+<br>

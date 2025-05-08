@@ -1,0 +1,29 @@
+<!-- Address Block -->
+<div class="contentDiv">
+    <div>
+        <h3>Address Details:</h3> 
+        <table style="width: 80%;" border="0">
+            <tr>
+                <td style="width: 15%;">Address: </td>
+                <td colspan="5"><input type="text" name="address" class="txtBx1" value="{{ form.address.value }}"></td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td><input type="text" name="city" class="txtBx1" value="{{ form.city.value }}"></td>
+                <td>State:</td>
+                <td><input type="text" name="state" class="txtBx1" value="{{ form.state.value }}"></td>
+                <td>Pincode:</td>
+                <td><input type="text" maxlength="6" inputmode="numeric" name="pincode" class="txtBx1" value="{{ form.pincode.value }}"></td>
+            </tr>
+
+            <tr>
+                <td>Landmark:</td>
+                <td colspan="2"><input type="text" name="landmark" class="txtBx1" value="{{ form.landmark.value }}"></td>
+                <td>Distance From School (in Km):</td>
+                <td colspan="3"><input type="number" name="distance_from_school" class="txtBx1" value="{{ form.distance_from_school.value }}"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<br>

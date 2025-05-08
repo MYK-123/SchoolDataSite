@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form - ZIKRA MODEL SCHOOL</title>
+
+    {% load static %}
+
+    <script src="{% static 'scripts.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    {{ admission_form.non_field_errors }}
+{% for field in admission_form %}
+    <div>
+        {{ field.label_tag }}
+        {% if field.errors %}
+            <div class="error">{{ field.errors }}</div>
+        {% endif %}
+    </div>
+{% endfor %}
+
+    <form method="post" onsubmit="return validateForm()">
+
+        {% csrf_token %}
+        
+        <div class="pageFrm">
+            <div class="frmHeader">
+                <img src="{% static 'header.png' %}" style="max-width: inherit" alt="ZIKRA MODEL SCHOOL">
+            </div>
+            <br>
+
+            {% include 'office_details_template.html' %}
+
+            {% include 'student_details_template.html' %}
+
+            {% include 'father_details_template.html' %}
+
+            {% include 'mother_details_template.html' %}
+
+            {% include 'guardian_details_template.html' %}
+
+            {% include 'address_details_template.html' %}
+
+            {% include 'prev_school_details_template.html' %}
+
+            {% include 'decleration_template.html' %}
+
+            <div style="display: flex; justify-content: center;">
+                <input id="submitForm" type="submit" value="submit" disabled>
+            </div>
+
+
+            <br>
+
+
+
+        </div>
+
+
+    </form>
+</body>
+</html>
