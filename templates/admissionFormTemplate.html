@@ -15,8 +15,9 @@
     {{ admission_form.non_field_errors }}
 {% for field in admission_form %}
     <div>
-        {{ field.label_tag }}
+        
         {% if field.errors %}
+		{{ field.label_tag }}
             <div class="error">{{ field.errors }}</div>
         {% endif %}
     </div>
